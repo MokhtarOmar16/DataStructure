@@ -32,7 +32,8 @@ class SingleLinkedList:
     def length(self):
         return self.length
     
-    def deleteFirst(self):
+    def deleteHead(self):
+        if self.head is None : return
         self.head = self.head.next
         self.length -= 1
 
@@ -43,10 +44,10 @@ class SingleLinkedList:
     
     def delete(self,node :Node ):
         if node == self.head : 
-            self.deleteFirst()
+            self.deleteHead()
             return
         if node == self.tail : 
-            self.deleteFirst()
+            self.deleteHead()
             return
         
         parent = self.findParent(node)

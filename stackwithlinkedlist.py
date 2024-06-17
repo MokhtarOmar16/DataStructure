@@ -18,5 +18,8 @@ class Stack:
     def is_Empty(self):
         return self.__data_list.length <= 0
     
+    def size(self):
+        return self.__data_list.lenght
+    
     def printAll(self):
         self.__data_list.printAll()

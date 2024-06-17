@@ -42,6 +42,8 @@ class SingleLinkedList:
         self.length -= 1
     
     def deleteNode(self,Node):
+        if Node is  None :
+            return
         if Node == self.head : 
             self.deleteFirst()
             return

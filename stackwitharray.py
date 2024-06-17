@@ -1,3 +1,7 @@
+"""
+if you coded it in java ,cpp ,c ,c# ..etc
+you should add resize() method and edit the remain methods
+"""
 class Stack:
     def __init__(self) -> None:
         self.__data_list = []

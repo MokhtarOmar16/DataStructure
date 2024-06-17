@@ -41,18 +41,18 @@ class SingleLinkedList:
         self.tail.next = None
         self.length -= 1
     
-    def deleteNode(self,Node):
-        if Node is  None :
+    def deleteNode(self,node :Node):
+        if not isinstance(node,Node):
             return
-        if Node == self.head : 
+        if node == self.head : 
             self.deleteFirst()
             return
-        if Node == self.tail : 
+        if node == self.tail : 
             self.deleteFirst()
             return
         
-        parent = self.findParent(Node)
-        parent.next = Node.next
+        parent = self.findParent(node)
+        parent.next = node.next
         self.length -= 1
 
     def find(self, data) -> Node:

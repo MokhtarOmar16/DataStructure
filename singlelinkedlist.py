@@ -5,7 +5,7 @@ class Node:
 
 class SingleLinkedList:
     def __init__(self) -> None:
-        self.lenght = 0
+        self.length = 0
         self.head = None
         self.tail = None
     def insertLast(self , data):
@@ -16,7 +16,7 @@ class SingleLinkedList:
         else:
             self.tail.next = Newdata
             self.tail = Newdata
-        self.lenght += 1
+        self.length += 1
 
     def insertFirst(self , data):
         Newdata = Node(data)
@@ -26,11 +26,8 @@ class SingleLinkedList:
         else:
             Newdata.next = self.head
             self.head = Newdata
-        self.lenght += 1 
+        self.length += 1 
     
-    @property
-    def length(self):
-        return self.length
     
     def deleteHead(self):
         if self.head is None : return
@@ -74,6 +71,7 @@ class SingleLinkedList:
             loop = loop.next 
 
     def printAll(self):
+        if self.head is None: return
         loop = self.head
         while True:
             print(f"{loop.value} -> " , end= "")
@@ -87,14 +85,11 @@ class SingleLinkedList:
         parent = self.findParent(node.value)
         parent.next= newNode
         newNode.next = node
-        self.lenght += 1 
+        self.length += 1 
     
     def insertAfter(self, node, data):
         nextNode = node.next
         newNode = Node(data)
         newNode.next = nextNode
         node.next = newNode
-        self.lenght += 1 
-
-
-
+        self.length += 1 

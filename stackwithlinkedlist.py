@@ -23,10 +23,3 @@ class Stack:
     
     def printAll(self):
         self.__data_list.printAll()
-
-
-s = Stack()
-s.push(2)
-s.push(3)
-s.pop()
-s.printAll()
